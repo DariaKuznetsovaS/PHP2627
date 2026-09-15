@@ -11,14 +11,18 @@ $agenda=[
 ];
 
 function imprimir($agenda){
-    for($x=0; $x<=count($agenda); $x++){
-      return "<tr>
-        <td>{$agenda[$x]['nombre']}</td>
-        <td>{$agenda[$x]['apellidos']}</td>
-        <td>{$agenda[$x]['telefono']}</td>
-        <td>{$agenda[$x]['email']}</td>
+    $resultado = "";
+
+    for($x = 0; $x < count($agenda); $x++){
+        $resultado .= "<tr>
+            <td>{$agenda[$x]['nombre']}</td>
+            <td>{$agenda[$x]['apellidos']}</td>
+            <td>{$agenda[$x]['telefono']}</td>
+            <td>{$agenda[$x]['email']}</td>
         </tr>";
     }
+
+    return $resultado;
 }
 
 require "index.view.php";
