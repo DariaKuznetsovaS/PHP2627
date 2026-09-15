@@ -8,10 +8,10 @@
 <body>
     
 <ul>
-<?php while($lista): ?>
-    <li><?=$l ?></li>
-
-<?php endforeach; ?>
+<?php while($x<count($lista)): ?>
+    <li><?= $lista[$x] ?></li>
+<?php $x++; ?>
+<?php endwhile; ?>    
 </ul>
 </body>
 </html>
