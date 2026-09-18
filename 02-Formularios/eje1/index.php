@@ -1,15 +1,20 @@
 <?php
+if(isset($_GET["temperatura"])||isset($_GET["unidad"])){
+$temperatura=$_GET["temperatura"];
+$unidad=$_GET["unidad"];
+}
 
-$temperatura=$_POST["temperatura"];
-$unidad=$_POST["unidad"];
+$resultado=calcularTemperatura($temperatura, $unidad);
 
 function calcularTemperatura($temperatura, $unidad){
     if($unidad=="ce"){
-        $resultado+=27;
-    } elseif{
-
+       return $resultado=1.8*$temperatura+27;
+    } elseif($unidad=="fa"){
+       return $resultado=$temperatura-27;
     }
-    return $resultado;
+    return -1;
 }
+
+
 require "index.view.php";
 ?>
