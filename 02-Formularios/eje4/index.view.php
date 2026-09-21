@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eje 3</title>
+    <title>Eje 4</title>
 
 <style>
     * {
@@ -51,14 +51,14 @@
 
     input[type="submit"] {
         margin-top: 10px;
-        background-color: #94aedbff;
+        background-color: teal;
         color: white;
         border: none;
         cursor: pointer;
     }
 
     input[type="submit"]:hover {
-        background-color: #2a5bb1ff;
+        background-color: purple;
     }
 </style>
 
@@ -69,22 +69,12 @@
 
 <form method="post" action="index.php">
 
-<label for="asunto">Asunto:</label>
-<input type="text" name="asunto" id="asunto">
+<label for="user">Usuario:</label>
+<input type="text" name="user" id="user">
 
-<label for="email">Email:</label>
-<input type="email" name="email" id="email">
+<label for="pass">Email:</label>
+<input type="password" name="pass" id="pass">
 
-<label for="motivo">Motivo:</label>
-<select name="motivo" id="motivo">
-    <option value="sup">Soporte técnico</option>
-    <option value="info">Información de productos</option>
-    <option value="queja">Queja</option>
-    <option value="otro">Otro</option>
-</select>
-
-<label for="mensaje">Mensaje:</label>
-<textarea name="mensaje" id="mensaje"></textarea>
 
 <input type="submit" name="Enviar" value="Enviar">
 

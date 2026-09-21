@@ -26,9 +26,5 @@
  <input type="submit" name="Enviar" value="Enviar">
 </form>
 
-
-    
-    
-</table>
 </body>
 </html>
