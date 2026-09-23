@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eje 1</title>
     <style>
-        form{
+        body{
             display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: 1rem;
+            justify-content: center;
         }
         input{
             background-color: lightblue;
@@ -17,20 +15,20 @@
             padding: .5rem;
         }
 
-
-
     </style>
 </head>
 <body>
     
 
 <form method="get" action="index.php">
-<p><?=$mensaje ?></p>
-<label for="nombre">Introduce el nombre de usuario que deseas almacenar</label>
-<input type="text" name="user" id="nombre">
+<p>Idioma: <?=$idioma_cookie ?></p>
+<label for="idioma">Introduce el nombre de usuario que deseas almacenar</label>
+<select name="idioma" id="idioma">
+        <option value="es">Castellano</option>
+        <option value="eus">Euskera</option>
+</select>
 <input type="submit" value="Guardar">
 
-<input type="submit" value="Borrar cookie">
 </form>
 
 </body>

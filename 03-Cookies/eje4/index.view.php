@@ -20,14 +20,22 @@
 <body>
     
 
-<form method="post" action="index.php">
-<p>Idioma: <?=$idioma_cookie ?></p>
-<label for="idioma">Introduce el nombre de usuario que deseas almacenar</label>
-<select name="idioma" id="idioma">
-        <option value="es">Castellano</option>
-        <option value="eus">Euskera</option>
-</select>
+<form method="get" action="index.php">
+
+<h3>Lista de asistentes:</h3>
+
+<ul>
+<?php foreach($asistentes as $asistente): ?>
+    <li><?= $asistente ?> </li>
+<?php endforeach; ?>
+</ul>
+
+
+<label for="nombre">Añadir asistente</label>
+<input type="text" name="nombre" id="nombre">
 <input type="submit" value="Guardar">
+
+<input type="reset" value="Vaciar lista" name="borrar">
 
 </form>
 
