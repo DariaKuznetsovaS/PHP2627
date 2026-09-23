@@ -35,7 +35,7 @@
 <input type="text" name="nombre" id="nombre">
 <input type="submit" value="Guardar">
 
-<input type="reset" value="Vaciar lista" name="borrar">
+<input type="submit" value="Vaciar lista" name="borrar">
 
 </form>
 

@@ -1,20 +1,19 @@
 <?php
 session_start();
 
-$asistentes=$_SESSION;
-
-if(isset($_GET["nombre"])){
-
-    $_SESSION["nombre"]=$_GET["nombre"];
-
-    array_push($asistentes, $_SESSION["nombre"]);
-} 
-
-if(isset($_GET["borrar"])){
-   forEach($asistentes as $a){
-    array_unset($asistentes[$a]);
-   }
+if (!isset($_SESSION["asistentes"])) {
+    $_SESSION["asistentes"] = [];
 }
+
+if (isset($_GET["nombre"])) {
+    array_push($_SESSION["asistentes"], $_GET["nombre"]);
+}
+
+if (isset($_GET["borrar"])) {
+    $_SESSION["asistentes"] = [];
+}
+
+$asistentes = $_SESSION["asistentes"];
 
 require "index.view.php";
 ?>
