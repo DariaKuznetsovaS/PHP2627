@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eje 1</title>
     <style>
-        body{
+        form{
             display: flex;
-            justify-content: center;
+           gap: 1rem;
+        
+            flex-direction: column;
+            
         }
-        input{
+    
+        input[type="submit"]{
+            width: 10%;
             background-color: lightblue;
-            color: purple;
             padding: .5rem;
+            font-weight: bold;
+        }
+        input[type="text"]{
+            width: 20%;
+            background-color: pink;
+            padding: .3rem;
         }
 
     </style>
@@ -23,11 +33,17 @@
 <form method="get" action="index.php">
 
 <h3>Lista de asistentes:</h3>
-
+    
 <ul>
-<?php foreach($asistentes as $asistente): ?>
+    <?php if(count($asistentes)>0) :?>
+        <p>Hay asistentes:</p>
+        <?php foreach($asistentes as $asistente): ?>
     <li><?= $asistente ?> </li>
 <?php endforeach; ?>
+    <?php else: ?>
+        <p>No hay asistentes</p>
+    <?php endif; ?>
+
 </ul>
 
 
