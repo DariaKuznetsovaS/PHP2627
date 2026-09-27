@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eje 5</title>
+    <title>Eje 6</title>
     <style>
         form{
             display: flex;
@@ -37,18 +37,35 @@
 </head>
 <body>
     
+    <div class="cesta">
+        <h3>Cesta de la compra</h3>
+        <p>La cesta está vacía</p>
+    </div>
 
-<form method="post" action="index.php">
-        <label for="user">Usuario:</label>
-        <input type="text" id="user" name="user">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripci$oacuten</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
 
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass">
+        <tbody>
+            <?php foreach($productos as $id => $p): ?>
+            <tr>
+                <td><?=$p["nombre"]?></td> 
+                <td><?=$p["desc"]?></td>
+                <td><?=$p["precio"]?></td>
+                <!--EL ID en el link directamente: -->
+                <td><a href="index.php?accion=annadir&idProducto=<?= $id ?>">Comprar </a> </td>     
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 
-<p><?=$mensaje ?></p>
-<input type="submit" value="Entrar">
 
-</form>
 
 </body>
 </html>
