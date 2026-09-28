@@ -61,6 +61,9 @@ function realizarAccion($accion, $id, $db){
     if($accion == "eliminar"){
         borrarElemento($id, $db);
     }
+    if($accion=="vaciar"){
+        vaciarLista($listaCompra, $db);
+    }
 }
 
 function borrarElemento($id, $db){
@@ -72,6 +75,8 @@ function borrarElemento($id, $db){
 
     $stmt->execute([$id]);
 }
+
+
 
 require "index.view.php";
 ?>

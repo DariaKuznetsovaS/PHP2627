@@ -29,6 +29,7 @@
 <form action="index.php" method="post">
 <input type="text" name="producto"><input type="submit" value="Añadir">
 
+<a href="index.php?accion=vaciar">Vaciar lista</a>
 </form>
 
 </body>
