@@ -46,7 +46,7 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Descripci$oacuten</th>
+                <th>Descripción</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
             </tr>
@@ -59,7 +59,7 @@
                 <td><?=$p["desc"]?></td>
                 <td><?=$p["precio"]?></td>
                 <!--EL ID en el link directamente: -->
-                <td><a href="index.php?accion=annadir&idProducto=<?= $id ?>">Comprar </a> </td>     
+                <td><a href="index.php?accion=annadir&idProducto=<?= $id ?>">Añadir </a> </td>     
             </tr>
             <?php endforeach; ?>
         </tbody>

@@ -1,9 +1,6 @@
 <?php
-session_start():
-if(isset($_SESSION["productosCesta"])){
-    $_SESSION["productosCesta"]=[];
-}
 
+//Los productos(cargados en la tabla con un foreach:
 $productos = [
     1 => [
         "nombre" => "The Legend of Zelda: Tears of the Kingdom",
@@ -36,18 +33,27 @@ $productos = [
         "precio" => 24.99
     ]
 ];
+//Carga de sesión:
+session_start();
+//inicio de cesta:
+if(isset($_SESSION["productosCesta"])){
+    $_SESSION["productosCesta"]=[];
+}
 
 if(isset($_GET["accion"])){
     $accion=$_GET["accion"];
+    realizarAccion($accion);
 }
 
+function realizarAccion($accion){
 switch($accion){
     case "annadir":
         if(isset($_GET["idProducto"])){
             $idProductoComprado=$_GET["idProducto"];
-            array_push($_SESSION["productosCesta"],$idProductoComprado)
+            array_push($_SESSION["productosCesta"],$idProductoComprado);
         }
         break;
+}
 }
 
 
