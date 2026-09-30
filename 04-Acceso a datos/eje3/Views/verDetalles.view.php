@@ -44,55 +44,37 @@
 </head>
 <body>
  
-<div class="tabla">
 <table>
-    <thead>
         <tr>
             <th>DNI</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Opciones</th>
+            <td><?=$empleado["dni"]?></td>
         </tr>
-    </thead>
-
-<tbody>
-<?php foreach($listaEmpleados as $empleado) :?>
-<tr>
-    <td><?=$empleado["dni"]?></td>
-    <td><?=$empleado["nombre"]?></td>
-    <td><?=$empleado["apellidos"]?></td>
-    <td><a href="index.php?accion=verDetalles&dni=
-    <?=$empleado["dni"]?>">Ver detalles</a> |
-    <a href="index.php?accion=eliminar&dni=<?=$empleado["dni"]?>">
-        (Eliminar)</a>
-</tr>
-
-<?php endforeach; ?>
-</tbody>
-
+        <tr>
+            <th>Nombre</th>
+            <td><?=$empleado["nombre"]?></td>
+        </tr>
+        <tr>
+            <th>Apellidos</th>
+            <td><?=$empleado["apellidos"]?></td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td><?=$empleado["edad"] ?></td>
+        </tr>
+        <tr>
+            <th>Sexo</th>
+            <td><?=$empleado["sexo"] ?></td>
+        </tr>
+        <tr>
+            <th>Fecha de nacimiento</th>
+            <td><?=$empleado["fecha_nac"] ?></td>
+        </tr>
+        <tr>
+            <th>Curriculum</th>
+            <td><?=$empleado["curriculum"] ?></td>
+        </tr>
+   
 </table>
-<p>*Opción secreta: <a href="index.php?accion=vaciar">Vaciar lista</a></p>
-</div>
-
-
-
-<form action="index.php" method="get">
-    <h3>Añadir un nuevo empleado</h3>
-    <input type="text" name="nombre" placeholder="Nombre">
-    <input type="text" name="apellidos" placeholder="Apellidos">
-    <input type="number" name="edad" placeholder="Edad">
-    <input type="date" name="fechaNac">
-    <input type="email" name="email" placeholder="Email">
-    <input type="text" name="dni" placeholder="DNI">
-    <select name="sexo">
-        <option>Mujer</option>
-        <option>Hombre</option>
-    </select>
-    <textarea name="curriculum"></textarea>
-    <input type="submit" value="Añadir">
-
-</form>
-
 
 </body>
 </html>
