@@ -6,4 +6,3 @@
     <title>Eje 6</title>
     <link rel="stylesheet" href="Views/Estilos/style.css" type="text/css">
 </head>
-<body>
