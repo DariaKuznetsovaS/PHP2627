@@ -9,8 +9,4 @@ function area(){
 
 }
 
-
-
-
-
 ?>
