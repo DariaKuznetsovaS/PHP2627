@@ -4,45 +4,50 @@ require_once __DIR__ . "vendor/autoload.php";
 
 use Ejercicio3\Admin;
 use Ejercicio3\RegularUser;
+use Faker\Factory;
 
-$admin = new Admin(
-    "admin1", 
-    "Daria",
-    "kuznetsova",
-    "admin@gmail.com",
-    "1234",
-    2
-);
+$faker = Factory::create('es_ES');
 
-$user = new regularUser(
-    "user1",
-    "Ana",
-    "Lopez",
-    "ana@gmail.com",
-    "1234",
-    "@ana",
-    "@ana_instagram"
-);
+echo "<h2>Administradores</h2>";
 
-echo "<h2>Admin</h2>";
+for ($i = 0; $i < 5; $i++) {
 
-$admin->showActions();
-$admin->login();
-$admin->desactivarUsuario('usuario1');
-$admin->logout();
+    $admin = new Admin(
+        $faker->userName(),
+        $faker->firstName(),
+        $faker->lastName(),
+        $faker->safeEmail(),
+        $faker->password(),
+        $faker->randomElement([1, 2, 3])
+    );
 
-echo "Nivel de administrador: " . $admin->getAdminLevel();
+    $admin->showActions();
+    $admin->login();
+    $admin->desactivarUsuario();
+    $admin->logout();
 
-// Probamos los métodos del usuario
-echo "<h2>Usuario normal</h2>";
+    echo "<p>Administrador: " . $admin->getUsername() . "</p>";
+}
 
-$usuario->showActions();
-$usuario->login();
-$usuario->editarPerfil();
-$usuario->logout();
+echo "<h2>Usuarios normales</h2>";
 
-echo "Twitter: " . $usuario->getTwitter();
-echo "<br>Instagram: " . $usuario->getInstagram();
-echo "<br>Último acceso: " . $usuario->getUltimoAcceso()->format('d/m/Y H:i:s');
+for ($i = 0; $i < 5; $i++) {
 
+    $usuario = new RegularUser(
+        $faker->userName(),
+        $faker->firstName(),
+        $faker->lastName(),
+        $faker->safeEmail(),
+        $faker->password(),
+        $faker->userName(),
+        $faker->userName()
+    );
+
+    $usuario->showActions();
+    $usuario->login();
+    $usuario->editarPerfil();
+    $usuario->logout();
+
+    echo "<p>Usuario: " . $usuario->getUsername() . "</p>";
+}
 ?>
