@@ -1,0 +1,17 @@
+{
+    "name": "142ga01/ejercicio2",
+    "require": {
+        "monolog/monolog": "^3.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ejercicio2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DariaKuznetsovaS",
+            "email": "daria.kuznetsova.50758@ikasle.egibide.org"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "142ga01/ejercicio1",
+    "require": {
+        "phpunit/php-timer": "^8.0"
+    },
+    "authors": [
+        {
+            "name": "DariaKuznetsovaS",
+            "email": "daria.kuznetsova.50758@ikasle.egibide.org"
+        }
+    ]
+}
