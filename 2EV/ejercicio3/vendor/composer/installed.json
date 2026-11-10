@@ -1,17 +1,17 @@
 {
     "packages": [
         {
-            "name": "fzaninotto/faker",
+            "name": "fakerphp/faker",
             "version": "v1.5.0",
             "version_normalized": "1.5.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
+                "url": "https://github.com/FakerPHP/Faker.git",
                 "reference": "d0190b156bcca848d401fb80f31f504f37141c8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d0190b156bcca848d401fb80f31f504f37141c8d",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/d0190b156bcca848d401fb80f31f504f37141c8d",
                 "reference": "d0190b156bcca848d401fb80f31f504f37141c8d",
                 "shasum": ""
             },
@@ -54,11 +54,10 @@
                 "fixtures"
             ],
             "support": {
-                "issues": "https://github.com/fzaninotto/Faker/issues",
-                "source": "https://github.com/fzaninotto/Faker/tree/master"
+                "issues": "https://github.com/FakerPHP/Faker/issues",
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.5.0"
             },
-            "abandoned": true,
-            "install-path": "../fzaninotto/faker"
+            "install-path": "../fakerphp/faker"
         },
         {
             "name": "monolog/monolog",

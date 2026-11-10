@@ -8,6 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
-    'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
-    'Ejercicio3\\' => array($baseDir . '/src'),
+    'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
+    'Ejercicio3\\' => array($baseDir . '/src/Models'),
 );

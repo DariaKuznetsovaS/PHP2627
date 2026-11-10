@@ -1,12 +1,12 @@
 {
     "name": "142ga01/ejercicio3",
     "require": {
-        "fzaninotto/faker": "^1.5",
-        "monolog/monolog": "^3.12"
+        "monolog/monolog": "^3.12",
+        "fakerphp/faker": "^1.5"
     },
     "autoload": {
         "psr-4": {
-            "Ejercicio3\\": "src/"
+            "Ejercicio3\\": "src/Models"
         }
     },
     "authors": [

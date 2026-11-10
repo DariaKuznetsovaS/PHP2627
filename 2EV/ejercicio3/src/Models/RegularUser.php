@@ -1,6 +1,4 @@
-
 <?php
-
 namespace Ejercicio3;
 
 class RegularUser extends User {

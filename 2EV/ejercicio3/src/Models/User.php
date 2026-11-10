@@ -1,49 +1,58 @@
 <?php
-
 namespace Ejercicio3;
 
 use Monolog\Logger;
 use Monolog\Level;
 use Monolog\Handler\StreamHandler;
 
-class User{
+abstract class User {
+
     protected $username;
     protected $nombre;
-    protected $apellidos,
+    protected $apellidos;
     protected $email;
     protected $password;
-    protected DateTime $ultimo_acceso;
+    protected \DateTime $ultimo_acceso;
     protected $log;
 
-    public function __construct($username, $nombre, $apellidos, $email, $password, $ultimo_acceso){
-        
-        $this->username=$usernmae;
-        $this->nombre=$nombre;
-        $this->apellidos=$apellidos;
-        $this->email=$email;
-        $this->password=$password;
+    public function __construct($username, $nombre, $apellidos, $email, $password) {
 
-        //Logger
-        $this->log=new Logger('usuarios');
+        $this->username = $username;
+        $this->nombre = $nombre;
+        $this->apellidos = $apellidos;
+        $this->email = $email;
+        $this->password = $password;
+        $this->ultimo_acceso = new \DateTime();
 
-        //Indica dónde se guardan los logs:
-        $this->log->pushHandler(new StreamHandler
-        (__DIR__ . "/../app.log", Level::Warning));
+        // Logger
+        $this->log = new Logger('usuarios');
 
+        // Indica dónde se guardan los logs
+        $this->log->pushHandler(
+            new StreamHandler(
+                __DIR__ . '/../../app.log',
+                Level::Info
+            )
+        );
     }
 
-    public abstract function showActions(){
-
-    }
+    abstract public function showActions();
 
     public function login() {
-        $this->ultimo_acceso = new DateTime();
+        $this->ultimo_acceso = new \DateTime();
         $this->log->info("El usuario " . $this->username . " ha iniciado sesión");
     }
 
     public function logout() {
         $this->log->info("El usuario " . $this->username . " ha cerrado sesión");
     }
+
+    protected function registrarLog($metodo) {
+    $this->log->info(
+        "Ejecutando el método " . $metodo .
+        " por el usuario " . $this->username
+    );
+}
 
     // Getters y setters
 
@@ -91,8 +100,7 @@ class User{
         return $this->ultimo_acceso;
     }
 
-    public function setUltimoAcceso(DateTime $ultimo_acceso) {
+    public function setUltimoAcceso(\DateTime $ultimo_acceso) {
         $this->ultimo_acceso = $ultimo_acceso;
     }
-
 }
