@@ -1,47 +1,32 @@
 <?php return array(
     'root' => array(
-        'name' => '142ga01/ejercicio2',
+        'name' => 'tequi/ejercicio2',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8e22a1336a0b72112740d8b337d30218677e051c',
+        'reference' => 'db0278c3b5bcbb852fcc0fecb4aef0cf66dc8e23',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '142ga01/ejercicio2' => array(
+        'eftec/bladeone' => array(
+            'pretty_version' => '5.0',
+            'version' => '5.0.0.0',
+            'reference' => 'f5fa190c36b007086e8c0140c19214e2e45c45d9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../eftec/bladeone',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'tequi/ejercicio2' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '8e22a1336a0b72112740d8b337d30218677e051c',
+            'reference' => 'db0278c3b5bcbb852fcc0fecb4aef0cf66dc8e23',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
-        ),
-        'monolog/monolog' => array(
-            'pretty_version' => '3.12.1',
-            'version' => '3.12.1.0',
-            'reference' => 'd7059e4c691d05ea1222b5124bed0f961be46e15',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../monolog/monolog',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'psr/log' => array(
-            'pretty_version' => '3.0.2',
-            'version' => '3.0.2.0',
-            'reference' => 'f16e1d5863e37f8d8c2a01719f5b34baa2b714d3',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../psr/log',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'psr/log-implementation' => array(
-            'dev_requirement' => false,
-            'provided' => array(
-                0 => '3.0.0',
-            ),
         ),
     ),
 );

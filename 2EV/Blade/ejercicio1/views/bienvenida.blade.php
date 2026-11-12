@@ -1,0 +1,1 @@
+<h1>Bienvenid@, {{$nombre}}</h1>

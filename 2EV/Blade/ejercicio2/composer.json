@@ -1,0 +1,17 @@
+{
+    "name": "tequi/ejercicio2",
+    "require": {
+        "eftec/bladeone": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ejercicio2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DariaKuznetsovaS",
+            "email": "daria.kuznetsova.50758@ikasle.egibide.org"
+        }
+    ]
+}
